@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import twitter
 import time
 import datetime
@@ -43,8 +45,8 @@ class TSearch:
     def get(self):
         return self.data
 if __name__== "__main__":
-    q = ["Владимир", "Путин", "военные", "рельсы", "производству военной продукции"]
-    z =  TSearch(["интерфакс", "путин"]).get()
+    q = ["Р’Р»Р°РґРёРјРёСЂ", "РџСѓС‚РёРЅ", "РІРѕРµРЅРЅС‹Рµ", "СЂРµР»СЊСЃС‹", "РїСЂРѕРёР·РІРѕРґСЃС‚РІСѓ РІРѕРµРЅРЅРѕР№ РїСЂРѕРґСѓРєС†РёРё"]
+    z =  TSearch(["РёРЅС‚РµСЂС„Р°РєСЃ", "РїСѓС‚РёРЅ"]).get()
     print(len(z))
     for el in z:
         print(z[el], el)

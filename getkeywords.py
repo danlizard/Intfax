@@ -1,6 +1,8 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import pymorphy2
 morph = pymorphy2.MorphAnalyzer()
-charact = set('qwertyuiopasdfghjk lzxcvbnmйцукенгшщзхъфывапролджэячсмитьбю1ё23456780')
+charact = set('qwertyuiopasdfghjk lzxcvbnmР№С†СѓРєРµРЅРіС€С‰Р·С…СЉС„С‹РІР°РїСЂРѕР»РґР¶СЌСЏС‡СЃРјРёС‚СЊР±СЋ1С‘23456780')
 def make_header(raw_text):
     print(raw_text)
     raw_text = list(raw_text.lower())
@@ -16,5 +18,5 @@ def make_header(raw_text):
             ans.append(el)
     return ans
 if __name__ == "__main__":
-    s = 'С космодрома Плесецк запущен "Союз" с военным спутником'
+    s = 'РЎ РєРѕСЃРјРѕРґСЂРѕРјР° РџР»РµСЃРµС†Рє Р·Р°РїСѓС‰РµРЅ "РЎРѕСЋР·" СЃ РІРѕРµРЅРЅС‹Рј СЃРїСѓС‚РЅРёРєРѕРј'
     print(" ".join(make_header(s)))
