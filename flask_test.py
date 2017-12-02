@@ -8,7 +8,7 @@ def hello_world():
     return 'Hello, World!'
 
 @app.route('/getTweets', methods=['POST'])
-def getTwitsWEB(title):
+def getTwitsWEB():
     print("Request is received")
     arr = getTwits(request.get_json()["title"])
     ans = dict()
