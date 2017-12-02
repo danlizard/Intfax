@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import twitter
+#import twitter
 import time
 import datetime
 from info import *
