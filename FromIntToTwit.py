@@ -9,6 +9,7 @@ def getTwits(header):
         ans[1] += v[el][1]
         ans[2] += v[el][2]
         ans[3] += v[el][3]
+    print("OK")
     return ans
 
 if __name__ == "__main__":

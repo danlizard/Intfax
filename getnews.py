@@ -40,6 +40,7 @@ class TSearch:
                 #self.data.append(tweet)
                 #print( 'tweeted: %s' % (tweet['text'] ) 
         self.data = unique
+        print("TSearch")
     def size(self):
         return len(self.data)
     def get(self):

@@ -16,6 +16,7 @@ def make_header(raw_text):
     for el in arr:
         if morph.parse(el)[0].tag.POS in good:
             ans.append(el)
+    print(ans)
     return ans
 if __name__ == "__main__":
     s = 'С космодрома Плесецк запущен "Союз" с военным спутником'
