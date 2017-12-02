@@ -3,7 +3,8 @@ from getkeywords import *
 
 def getTwits(header):
     v = TSearch(make_header(header)).get()
-    ans = ["Z", 0, 0, 0]
+    v, l = v[0], v[1]
+    ans = ["Z", 0, 0, 0, l]
     for el in v:
         ans[0] = min(ans[0], v[el][0])
         ans[1] += v[el][1]

@@ -16,4 +16,5 @@ def getTwitsWEB():
     ans["forked"] = str(arr[1])
     ans["reposted"] = str(arr[2])
     ans["liked"] = str(arr[3])
+    ans["link"] = str(arr[4])
     return jsonify(ans)

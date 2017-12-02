@@ -26,9 +26,15 @@ class TSearch:
                 queries, tweets_seen = current_ts_instance.get_statistics()
                 if queries > 0 and (queries % 5) == 0: # trigger delay every 5th query
                     time.sleep(60) # sleep for 60 seconds
-        
+        twe = []
         for tweet in ts.search_tweets_iterable(tso, callback=my_callback_closure):        
             tweet["user"] = None
+            link = tweet["text"][tweet["text"].find("https://t.co/"):]
+            print(tweet)
+            try:
+                twe.append(tweet["entities"]["media"][0]["url"])
+            except:
+                twe.append(link)
             if tweet["text"] in unique:
                 unique[tweet["text"]][0] = min(unique[tweet["text"]][0], tweet["created_at"])
                 unique[tweet["text"]][1] += 1
@@ -40,11 +46,12 @@ class TSearch:
                 #self.data.append(tweet)
                 #print( 'tweeted: %s' % (tweet['text'] ) 
         self.data = unique
+        self.links = twe
         print("TSearch")
     def size(self):
         return len(self.data)
     def get(self):
-        return self.data
+        return [self.data, self.links]
 if __name__== "__main__":
     q = ["Владимир", "Путин", "военные", "рельсы", "производству военной продукции"]
     z =  TSearch(["интерфакс", "путин"]).get()
