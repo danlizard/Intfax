@@ -7,7 +7,7 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
-@app.route('/getTwits/<title>', methods=['POST'])
+@app.route('/getTweets', methods=['POST'])
 def getTwitsWEB(title):
     print("Request is received")
     arr = getTwits(request.get_json()["title"])
