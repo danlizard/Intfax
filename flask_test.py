@@ -10,7 +10,7 @@ def hello_world():
 @app.route('/getTwits/<title>', methods=['POST'])
 def getTwitsWEB(title):
     print("Request is received")
-    arr = getTwits(request.form["title"])
+    arr = getTwits(request.get_json()["title"])
     ans = dict()
     ans["time"] = arr[0]
     ans["forked"] = str(arr[1])
